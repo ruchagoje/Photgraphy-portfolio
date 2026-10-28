@@ -1,0 +1,120 @@
+.section {
+  padding: clamp(5rem, 11vw, 9rem) var(--pad);
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: end;
+  gap: 2rem;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.title {
+  font-size: clamp(2.6rem, 5.4vw, 4.8rem);
+  margin-top: 1.2rem;
+}
+
+.title em,
+.sub em {
+  font-style: italic;
+  color: var(--burgundy);
+}
+
+.sub {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+  justify-self: end;
+  max-width: 22rem;
+}
+
+.sub p {
+  font-family: var(--font-serif), serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: var(--brown);
+}
+
+.row {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2vw, 1.8rem);
+}
+
+.offset {
+  margin-top: 3.5rem;
+}
+
+.link {
+  display: block;
+}
+
+.media {
+  aspect-ratio: 3 / 4.4;
+  background: var(--ivory-2);
+}
+
+.zoom {
+  position: absolute;
+  inset: 0;
+  transition: transform 1.2s var(--ease);
+}
+
+.link:hover .zoom {
+  transform: scale(1.06);
+}
+
+.caption {
+  padding-top: 1.3rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.caption small {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  color: var(--brown);
+}
+
+.caption h3 {
+  font-size: clamp(1.5rem, 2vw, 1.9rem);
+}
+
+.caption p {
+  font-family: var(--font-serif), serif;
+  font-style: italic;
+  color: var(--brown);
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+}
+
+@media (max-width: 1080px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .head {
+    grid-template-columns: 1fr;
+  }
+  .sub {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 600px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+  .offset {
+    margin-top: 0;
+  }
+}

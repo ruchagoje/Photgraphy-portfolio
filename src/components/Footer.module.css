@@ -1,0 +1,52 @@
+.footer {
+  background: var(--charcoal);
+  color: rgba(244, 238, 228, 0.7);
+  padding: 3.5rem var(--pad) 2.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.2rem 2.5rem;
+  align-items: center;
+  border-top: 1px solid rgba(244, 238, 228, 0.1);
+  font-size: 0.8rem;
+}
+
+.logo {
+  font-size: 2.4rem;
+  color: var(--ivory);
+}
+
+.footer p {
+  font-family: var(--font-serif), serif;
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+.footer nav {
+  display: flex;
+  gap: 1.8rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.footer nav a:hover {
+  color: var(--ivory);
+}
+
+.footer small {
+  grid-column: 1 / -1;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(244, 238, 228, 0.08);
+}
+
+@media (max-width: 820px) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
+  .footer nav {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,172 @@
+.section {
+  padding: clamp(5rem, 10vw, 8rem) var(--pad);
+  background: var(--paper);
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(3rem, 7vw, 7rem);
+  align-items: center;
+  border-top: 1px solid var(--line);
+}
+
+.collage {
+  position: relative;
+  aspect-ratio: 1 / 1.05;
+  max-width: 640px;
+  width: 100%;
+}
+
+.main {
+  position: absolute;
+  left: 8%;
+  top: 4%;
+  width: 54%;
+  transform: rotate(-3deg);
+  padding: 0.7rem 0.7rem 2.6rem;
+  background: #fff;
+  box-shadow: 0 24px 50px rgba(23, 21, 20, 0.16);
+  z-index: 2;
+}
+
+.mainImg {
+  aspect-ratio: 4 / 5;
+}
+
+.strip {
+  position: absolute;
+  top: 0;
+  right: 6%;
+  width: 22%;
+  padding: 0.6rem 0.5rem;
+  background: var(--charcoal);
+  display: grid;
+  gap: 0.5rem;
+  transform: rotate(5deg);
+  z-index: 1;
+  box-shadow: 0 20px 40px rgba(23, 21, 20, 0.18);
+}
+
+.frame {
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 1 / 1.1;
+  border-left: 4px dotted rgba(244, 238, 228, 0.4);
+  border-right: 4px dotted rgba(244, 238, 228, 0.4);
+}
+
+.frame > div {
+  filter: grayscale(0.4) sepia(0.2);
+}
+
+.polaroid {
+  position: absolute;
+  right: 4%;
+  top: 46%;
+  width: 34%;
+  padding: 0.55rem 0.55rem 2rem;
+  background: #fff;
+  transform: rotate(7deg);
+  box-shadow: 0 20px 40px rgba(23, 21, 20, 0.18);
+  z-index: 3;
+}
+
+.polaroidImg {
+  position: relative;
+  aspect-ratio: 1;
+  filter: grayscale(1);
+}
+
+.taped {
+  position: absolute;
+  left: 0;
+  bottom: 14%;
+  z-index: 4;
+  background: var(--ivory-2);
+  padding: 1.1rem 1.4rem;
+  transform: rotate(-5deg);
+  box-shadow: 0 10px 25px rgba(23, 21, 20, 0.12);
+}
+
+.taped p {
+  font-family: var(--font-serif), serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--brown);
+}
+
+.tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 70px;
+  height: 20px;
+  margin-left: -35px;
+  background: rgba(214, 196, 170, 0.75);
+  transform: rotate(3deg);
+}
+
+.landscape {
+  position: absolute;
+  left: 32%;
+  bottom: 0;
+  width: 40%;
+  aspect-ratio: 3 / 2;
+  padding: 0.45rem;
+  background: #fff;
+  transform: rotate(-1.5deg);
+  box-shadow: 0 20px 40px rgba(23, 21, 20, 0.16);
+  z-index: 3;
+}
+
+.landscape > div {
+  position: relative;
+}
+
+.text {
+  position: relative;
+  max-width: 30rem;
+  display: grid;
+  gap: 1.6rem;
+  justify-items: start;
+}
+
+.title {
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+}
+
+.title em {
+  font-style: italic;
+  color: var(--burgundy);
+}
+
+.copy {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #3e3631;
+  line-height: 1.85;
+}
+
+.sign {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  color: var(--brown);
+}
+
+.flower {
+  width: 52px;
+}
+
+.sign p {
+  font-size: 2rem;
+  line-height: 1.05;
+}
+
+@media (max-width: 960px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+  .collage {
+    justify-self: center;
+  }
+}

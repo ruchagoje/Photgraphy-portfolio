@@ -1,0 +1,77 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 850;
+  background: rgba(17, 15, 14, 0.96);
+  color: var(--ivory);
+  display: grid;
+  place-items: center;
+}
+
+.stage {
+  position: relative;
+  width: min(90vw, 1200px);
+  height: 80vh;
+}
+
+.img {
+  object-fit: contain;
+}
+
+.close {
+  position: absolute;
+  top: 1.4rem;
+  right: var(--pad);
+  font-size: 0.7rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  padding: 0.6rem 0;
+  z-index: 2;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(244, 238, 228, 0.3);
+  border-radius: 50%;
+  font-size: 1.1rem;
+  z-index: 2;
+  transition: background 0.4s var(--ease);
+}
+
+.nav:hover {
+  background: rgba(244, 238, 228, 0.1);
+}
+
+.prev {
+  left: var(--pad);
+}
+
+.next {
+  right: var(--pad);
+}
+
+.counter {
+  position: absolute;
+  bottom: 1.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  color: rgba(244, 238, 228, 0.65);
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .nav {
+    top: auto;
+    bottom: 1rem;
+    transform: none;
+  }
+  .stage {
+    height: 70vh;
+  }
+}

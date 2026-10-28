@@ -1,0 +1,9 @@
+node_modules
+.next
+.DS_Store
+
+# raw source photos (optimized copies live in public/images)
+photos/
+.env*
+*.tsbuildinfo
+.snowflake/
