@@ -46,8 +46,10 @@ export const categories: Category[] = [
     title: "Pre-Wedding",
     tagline: "Two stories becoming one.",
     description: "Unhurried portraits of two people, just before the beginning of forever.",
-    cover: { src: null, alt: "Pre-wedding couple", label: "Pre-Wedding · Cover" },
-    images: [],
+    cover: { src: "/images/portfolio/pre-wedding/cover.jpg", alt: "Couple on a veranda, groom kneeling to adjust the bride's silk saree" },
+    images: [
+      { src: "/images/portfolio/pre-wedding/cover.jpg", alt: "Bride in a gold and pink silk saree smiling down at the groom in a maroon kurta, kneeling to adjust her pleats on a veranda" },
+    ],
   },
   {
     slug: "portraits",

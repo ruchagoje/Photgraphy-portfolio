@@ -10,7 +10,7 @@ let count = 0;
 
 for (const f of readdirSync(dir)) {
   const text = readFileSync(join(dir, f), "utf8");
-  for (const [, p] of text.matchAll(/src:\s*"(\/[^"]+)"/g)) {
+  for (const [, p] of text.matchAll(/(?:src|poster):\s*"(\/[^"]+)"/g)) {
     count++;
     if (!existsSync(join(root, "public", decodeURIComponent(p)))) missing.push(`${f}: ${p}`);
   }

@@ -1,20 +1,11 @@
-import type { Img } from "./site";
-
 /**
- * Before/after brand edits. Put files in public/images/brand-edits/<project>/before.jpg & after.jpg.
- * The slider only appears when both before and after have a real src; otherwise labeled frames show.
+ * Brand video edits. Put files in public/videos/brand/NN.mp4 with a poster frame at NN.jpg.
  */
-export const brandEdits: { title: string; before: Img; after: Img }[] = [
-  {
-    title: "Product retouch",
-    before: { src: null, alt: "Product photo before editing", label: "Brand edit · Before" },
-    after: { src: null, alt: "Product photo after editing", label: "Brand edit · After" },
-  },
-];
+export type BrandVideo = { src: string; poster: string; title: string; kind: "Clothing" | "Restaurant" };
 
-export const brandGallery: Img[] = [
-  { src: null, alt: "Brand photograph", label: "Brand · 01" },
-  { src: null, alt: "Brand photograph", label: "Brand · 02" },
-  { src: null, alt: "Brand photograph", label: "Brand · 03" },
-  { src: null, alt: "Brand photograph", label: "Brand · 04" },
+export const brandVideos: BrandVideo[] = [
+  { src: "/videos/brand/03.mp4", poster: "/videos/brand/03.jpg", title: "Clothing brand · Reel 01", kind: "Clothing" },
+  { src: "/videos/brand/01.mp4", poster: "/videos/brand/01.jpg", title: "Restaurant · Reel 01", kind: "Restaurant" },
+  { src: "/videos/brand/04.mp4", poster: "/videos/brand/04.jpg", title: "Clothing brand · Reel 02", kind: "Clothing" },
+  { src: "/videos/brand/02.mp4", poster: "/videos/brand/02.jpg", title: "Restaurant · Reel 02", kind: "Restaurant" },
 ];

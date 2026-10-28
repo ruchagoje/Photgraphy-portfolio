@@ -1,48 +1,37 @@
 import Link from "next/link";
-import Photo from "./Photo";
-import BeforeAfterSlider from "./BeforeAfterSlider";
+import BrandReel from "./BrandReel";
 import { Reveal } from "./Reveal";
-import { brandEdits, brandGallery } from "@/config/brandEdits";
+import { brandVideos } from "@/config/brandEdits";
 import styles from "./BrandShowcase.module.css";
 
 export default function BrandShowcase() {
-  const edit = brandEdits[0];
   return (
     <section className={styles.section} aria-labelledby="brand-title">
       <div className={styles.head}>
         <Reveal>
-          <p className="eyebrow">Brand photography &amp; editing</p>
+          <p className="eyebrow">Brand reels &amp; video editing</p>
           <h2 id="brand-title" className={styles.title}>
-            Visuals That Make <em>Brands</em> Stand Out.
+            Stories That Move, <em>Frame</em> by Frame.
           </h2>
         </Reveal>
         <Reveal index={1} className={styles.note}>
           <p>
-            From product shots to creative edits — every image is shaped to tell a brand&apos;s story. Drag the slider to
-            see the edit.
+            Reels I&apos;ve edited for clothing brands and restaurants — made to show your brand the way it
+            deserves to be seen.
           </p>
           <Link href="/#contact" className="link-arrow">
-            Start a brand project <span>→</span>
+            Get a reel for your brand <span>→</span>
           </Link>
         </Reveal>
       </div>
 
-      <div className={styles.body}>
-        {edit && (
-          <Reveal className={styles.slider}>
-            <BeforeAfterSlider before={edit.before} after={edit.after} title={edit.title} />
+      <ul className={styles.reels}>
+        {brandVideos.map((v, i) => (
+          <Reveal as="li" index={i} key={v.src}>
+            <BrandReel video={v} />
           </Reveal>
-        )}
-        <ul className={styles.grid}>
-          {brandGallery.map((g, i) => (
-            <Reveal as="li" index={i} key={i} className={styles.cell}>
-              <div className={styles.zoom}>
-                <Photo img={g} sizes="(max-width: 960px) 50vw, 20vw" />
-              </div>
-            </Reveal>
-          ))}
-        </ul>
-      </div>
+        ))}
+      </ul>
     </section>
   );
 }

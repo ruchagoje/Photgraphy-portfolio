@@ -38,16 +38,16 @@ export const site = {
   hero: {
     image: { src: "/images/hero/hero.jpg", alt: "Rucha holding a camera up to her eye" } as Img,
     inset: {
-      src: "/images/portfolio/maternity/01.jpg",
-      alt: "Black and white maternity portrait",
+      src: "/images/hero/inset.jpg",
+      alt: "Expecting mother in a navy gown on a forest bench, blowing bubbles",
       label: "Hero · Inset print",
     } as Img,
   },
 
   about: {
-    main: { src: null, alt: "Portrait of Rucha", label: "About · Main photo" } as Img,
+    main: { src: "/images/about/rucha.jpg", alt: "Rucha holding a camera up to her face against a green wall" } as Img,
     polaroid: { src: "/images/portfolio/maternity/02.jpg", alt: "Parents holding hands with tiny baby shoes" } as Img,
-    landscape: { src: "/images/about/october-flower.jpg", alt: "Hand holding a white parijat flower under the word October" } as Img,
+    landscape: { src: "/images/about/dimmi.jpg", alt: "Newborn baby sleeping on a blue blanket among cotton clouds" } as Img,
     filmStrip: [
       { src: "/images/portfolio/maternity/03.jpg", alt: "Expecting couple in plum outfits" },
       { src: "/images/portfolio/maternity/04.jpg", alt: "Expecting mother in a navy gown in a garden" },
